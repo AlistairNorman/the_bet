@@ -21,6 +21,8 @@ class DollarCalculator
   }
 
   def self.compute(outcome, player)
+    return 0 if outcome.total_gnarwhal_goals.zero?
+
     total = 0
 
     adjustments = DollarCalculator.const_get("#{outcome.public_send("#{player}_position")}_ADJUSTMENTS")
@@ -42,6 +44,8 @@ class DollarCalculator
     end
 
     total *= 1.3 if outcome.win?
+
+    total *= outcome.total_gnarwhal_goals ** -0.3
 
     total.round(2)
   end

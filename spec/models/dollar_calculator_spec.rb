@@ -9,6 +9,7 @@ RSpec.describe DollarCalculator do
         jardo_goals: 3,
         angry_firsts: 1,
         angry_seconds: 2,
+        total_gnarwhal_goals: 6,
         win: true,
         angry_position: "LW",
         jardo_position: "D"

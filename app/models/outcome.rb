@@ -12,7 +12,7 @@ class Outcome < ApplicationRecord
   private
 
   def compute_dollars
-    self.jardo_dollars ||= DollarCalculator.compute(self, :jardo)
-    self.angry_dollars ||= DollarCalculator.compute(self, :angry)
+    self.jardo_dollars = DollarCalculator.compute(self, :jardo)
+    self.angry_dollars = DollarCalculator.compute(self, :angry)
   end
 end

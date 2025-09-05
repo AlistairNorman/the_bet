@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_09_05_191423) do
+ActiveRecord::Schema[8.0].define(version: 2025_09_05_205151) do
   create_table "games", force: :cascade do |t|
     t.string "opponent", null: false
     t.date "date", null: false
@@ -38,6 +38,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_09_05_191423) do
     t.string "angry_position", default: "D", null: false
     t.float "angry_dollars", null: false
     t.float "jardo_dollars", null: false
+    t.integer "total_gnarwhal_goals", default: 0, null: false
   end
 
   add_foreign_key "games", "outcomes"

@@ -48,6 +48,10 @@
     <%= form.select :angry_position, options_for_select(['D', 'LW', 'RW', 'C'], @outcome.angry_position) %>
   </div>
   <div>
+    <%= form.label :total_gnarwhal_goals %>
+    <%= form.number_field :total_gnarwhal_goals %>
+  </div>
+  <div>
     <%= form.label :win %>
     <%= form.check_box :win %>
   </div>
