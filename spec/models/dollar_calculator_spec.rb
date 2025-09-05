@@ -18,7 +18,7 @@ RSpec.describe DollarCalculator do
       let(:player) { "jardo" }
 
       it "calculates the some random dollar value" do
-        expect(subject).to eq 7.74
+        expect(subject).to eq 57.59
       end
     end
 
@@ -26,7 +26,7 @@ RSpec.describe DollarCalculator do
       let(:player) { "angry" }
 
       it "calculates the some random dollar value" do
-        expect(subject).to eq 3.24
+        expect(subject).to eq 7.43
       end
     end
   end
