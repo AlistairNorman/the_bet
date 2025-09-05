@@ -24,10 +24,11 @@ class DollarCalculator
     adjustments = DollarCalculator.const_get("#{outcome.public_send("#{player}_position")}_ADJUSTMENTS")
 
     total = 0
+    money_range = 100..400
 
     adjustments.each do |point_type, value|
       outcome.public_send("#{player}_#{point_type.to_s.downcase}s").times do |i|
-        total += value
+        total += value * (money_range.to_a.sample / 100.0)
       end
     end
 
