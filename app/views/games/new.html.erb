@@ -1,0 +1,13 @@
+<%= form_for @game do |f| %>
+  <div class="field">
+    <%= f.label :opponent %>
+    <%= f.text_field :opponent %>
+  </div>
+
+  <div class="field">
+    <%= f.label :date %>
+    <%= f.date_select :date %>
+  </div>
+
+  <%= f.submit %>
+<% end %>

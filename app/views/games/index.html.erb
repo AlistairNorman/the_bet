@@ -1,4 +1,7 @@
+<%= link_to "New Game", new_game_path %>
+
 <% Game.find_each do |game| %>
   <p><%= game.opponent %></p>
   <p><%= game.date %></p>
+  <p> ------ </p>
 <% end %>
