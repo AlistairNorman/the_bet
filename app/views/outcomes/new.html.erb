@@ -1,0 +1,49 @@
+<%= form_with model: @outcome, url: game_outcomes_path, local: true do |form| %>
+  <div>
+    <%= form.label :jardo_goals %>
+    <%= form.number_field :jardo_goals %>
+  </div>
+  <div>
+    <%= form.label :jardo_firsts %>
+    <%= form.number_field :jardo_firsts %>
+  </div>
+  <div>
+    <%= form.label :jardo_seconds %>
+    <%= form.number_field :jardo_seconds %>
+  </div>
+  <div>
+    <%= form.label :jardo_ppp %>
+    <%= form.number_field :jardo_ppp %>
+  </div>
+  <div>
+    <%= form.label :jardo_shp %>
+    <%= form.number_field :jardo_shp %>
+  </div>
+  <div>
+    <%= form.label :angry_goals %>
+    <%= form.number_field :angry_goals %>
+  </div>
+  <div>
+    <%= form.label :angry_firsts %>
+    <%= form.number_field :angry_firsts %>
+  </div>
+  <div>
+    <%= form.label :angry_seconds %>
+    <%= form.number_field :angry_seconds %>
+  </div>
+  <div>
+    <%= form.label :angry_ppp %>
+    <%= form.number_field :angry_ppp %>
+  </div>
+  <div>
+    <%= form.label :angry_shp %>
+    <%= form.number_field :angry_shp %>
+  </div>
+  <div>
+    <%= form.label :win %>
+    <%= form.check_box :win %>
+  </div>
+  <div>
+    <%= form.submit "Create Outcome" %>
+  </div>
+<% end %>

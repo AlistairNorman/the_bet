@@ -1,10 +1,12 @@
 <%= link_to "New Game", new_game_path %>
 
 <% Game.find_each do |game| %>
-  <h3><%= "#{game.opponent} - #{game.date}" %></p>
+  <h3><%= link_to "#{game.opponent} - #{game.date}", new_game_outcome_path(game) %></h3>
 
   <% if game.outcome %>
-    <p><%= game.outcome.attributes.except(:created_at, :updated_at) %></p>
+    <% game.outcome.attributes.except("id", "created_at", "updated_at").each do |attribute, value| %>
+      <p><%= "#{attribute.titleize} - #{value}" %></p>
+    <% end %>
   <% end %>
 
   <p> ------ </p>
