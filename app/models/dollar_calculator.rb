@@ -45,7 +45,7 @@ class DollarCalculator
 
     total *= 1.3 if outcome.win?
 
-    total *= outcome.total_gnarwhal_goals ** -0.3
+    total *= outcome.total_gnarwhal_goals ** -0.2
 
     total.round(2)
   end
