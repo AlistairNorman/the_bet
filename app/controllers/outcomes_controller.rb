@@ -19,6 +19,6 @@ class OutcomesController < ApplicationController
   def outcome_params
     params
       .require(:outcome)
-      .permit(:jardo_goals, :jardo_firsts, :jardo_seconds, :jardo_ppp, :jardo_shp, :angry_goals, :angry_firsts, :angry_seconds, :angry_ppp, :angry_shp, :win)
+      .permit(:jardo_goals, :jardo_firsts, :jardo_seconds, :jardo_ppp, :jardo_shp, :angry_goals, :angry_firsts, :angry_seconds, :angry_ppp, :angry_shp, :win, :jardo_position, :angry_position)
   end
 end

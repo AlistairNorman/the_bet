@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_09_05_182652) do
+ActiveRecord::Schema[8.0].define(version: 2025_09_05_185029) do
   create_table "games", force: :cascade do |t|
     t.string "opponent", null: false
     t.date "date", null: false
@@ -34,6 +34,8 @@ ActiveRecord::Schema[8.0].define(version: 2025_09_05_182652) do
     t.boolean "win", default: true, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "jardo_position", default: "RW", null: false
+    t.string "angry_position", default: "D", null: false
   end
 
   add_foreign_key "games", "outcomes"

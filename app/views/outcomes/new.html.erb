@@ -20,6 +20,10 @@
     <%= form.number_field :jardo_shp %>
   </div>
   <div>
+    <%= form.label :jardo_position %>
+    <%= form.select :jardo_position, options_for_select(['D', 'LW', 'RW', 'C'], @outcome.jardo_position) %>
+  </div>
+  <div>
     <%= form.label :angry_goals %>
     <%= form.number_field :angry_goals %>
   </div>
@@ -38,6 +42,10 @@
   <div>
     <%= form.label :angry_shp %>
     <%= form.number_field :angry_shp %>
+  </div>
+  <div>
+    <%= form.label :angry_position %>
+    <%= form.select :angry_position, options_for_select(['D', 'LW', 'RW', 'C'], @outcome.angry_position) %>
   </div>
   <div>
     <%= form.label :win %>
