@@ -31,7 +31,7 @@ class DollarCalculator
     other_player_points = outcome.public_send("#{other_player}_goals") + outcome.public_send("#{other_player}_firsts") + outcome.public_send("#{other_player}_seconds")
 
     adjustments.each do |point_type, value|
-      total += value * (outcome.public_send("#{player}_#{point_type.to_s.downcase}s") ** 1.5)
+      total += value * (outcome.public_send("#{player}_#{point_type.to_s.downcase}s") ** 1.8)
     end
 
     total += outcome.public_send("#{player}_ppp")
