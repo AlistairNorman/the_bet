@@ -11,15 +11,15 @@ RSpec.describe DollarCalculator do
         angry_seconds: 2,
         total_gnarwhal_goals: 6,
         win: true,
-        angry_position: "LW",
-        jardo_position: "D"
+        angry_position: "D",
+        jardo_position: "RW"
     }
 
     context "when player is Jardo" do
       let(:player) { "jardo" }
 
       it "calculates the some random dollar value" do
-        expect(subject).to eq 57.59
+        expect(subject).to eq 19.35
       end
     end
 
@@ -27,7 +27,7 @@ RSpec.describe DollarCalculator do
       let(:player) { "angry" }
 
       it "calculates the some random dollar value" do
-        expect(subject).to eq 7.43
+        expect(subject).to eq 5.98
       end
     end
   end
