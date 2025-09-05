@@ -1,7 +1,11 @@
 <%= link_to "New Game", new_game_path %>
 
 <% Game.find_each do |game| %>
-  <p><%= game.opponent %></p>
-  <p><%= game.date %></p>
+  <h3><%= "#{game.opponent} - #{game.date}" %></p>
+
+  <% if game.outcome %>
+    <p><%= game.outcome.attributes.except(:created_at, :updated_at) %></p>
+  <% end %>
+
   <p> ------ </p>
 <% end %>

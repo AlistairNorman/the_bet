@@ -10,11 +10,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_09_05_175425) do
+ActiveRecord::Schema[8.0].define(version: 2025_09_05_182652) do
   create_table "games", force: :cascade do |t|
     t.string "opponent", null: false
     t.date "date", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "outcome_id"
+    t.index ["outcome_id"], name: "index_games_on_outcome_id"
   end
+
+  create_table "outcomes", force: :cascade do |t|
+    t.integer "jardo_goals", default: 0, null: false
+    t.integer "jardo_firsts", default: 0, null: false
+    t.integer "jardo_seconds", default: 0, null: false
+    t.integer "jardo_ppp", default: 0, null: false
+    t.integer "jardo_shp", default: 0, null: false
+    t.integer "angry_goals", default: 0, null: false
+    t.integer "angry_firsts", default: 0, null: false
+    t.integer "angry_seconds", default: 0, null: false
+    t.integer "angry_ppp", default: 0, null: false
+    t.integer "angry_shp", default: 0, null: false
+    t.boolean "win", default: true, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "games", "outcomes"
 end
