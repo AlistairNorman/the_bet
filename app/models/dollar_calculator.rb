@@ -29,6 +29,8 @@ class DollarCalculator
     adjustments.each do |point_type, value|
       outcome.public_send("#{player}_#{point_type.to_s.downcase}s").times do |i|
         total += value * (money_range.to_a.sample / 100.0)
+
+        money_range = (money_range.first - 50)..(money_range.last + 50)
       end
     end
 
