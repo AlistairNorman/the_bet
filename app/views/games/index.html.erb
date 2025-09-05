@@ -1,0 +1,4 @@
+<% Game.find_each do |game| %>
+  <p><%= game.opponent %></p>
+  <p><%= game.date %></p>
+<% end %>
